@@ -58,12 +58,12 @@ const questions = [
     {
         question: "เราชอบสีอะไร?",
         answers: ["แดง", "น้ำเงิน", "เขียว"],
-        correctAnswer: 0
+        correctAnswer: 1
     },
     {
         question: "เราชอบอาหารอะไร?",
         answers: ["พิซซ่า", "ข้าวผัด", "สเต็ก"],
-        correctAnswer: 1
+        correctAnswer: 0
     },
     {
         question: "เราชอบเที่ยวไหน?",
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeInOnScroll(); // เรียกทันที
 
     // เปลี่ยนรูปภาพอัตโนมัติ
-    const images = ['p/2.jpg', 'p/4.jpg', 'p/1.jpg', 'p/7.jpg']; 
+    const images = ['p/2.jpg', 'p/4.jpg', 'p/7.jpg']; 
     let currentImageIndex = 0;
     const imageElement = document.getElementById("birthdayImage");
 
@@ -206,3 +206,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(changeImage, 3000); // เปลี่ยนรูปทุก 3 วินาที
 });
+
+// function showHBD(imageElement) {
+//     // หาสถานที่แสดงข้อความ HBD ที่ตรงกลางภาพ
+//     const hbdMessage = document.getElementById("hbd-message");
+
+//     // แสดงข้อความ HBD
+//     hbdMessage.innerHTML = "HBD! 🎉";
+//     hbdMessage.style.display = "block";
+    
+//     // หาตำแหน่งของภาพที่คลิก
+//     const rect = imageElement.getBoundingClientRect();
+//     hbdMessage.style.top = (rect.top + rect.height / 2) + "px"; // ตั้งตำแหน่ง Y
+//     hbdMessage.style.left = (rect.left + rect.width / 2) + "px"; // ตั้งตำแหน่ง X
+
+//     // ซ่อนข้อความ HBD หลังจาก 2 วินาที
+//     setTimeout(() => {
+//         hbdMessage.style.display = "none";
+//     }, 2000);
+// }
+
