@@ -191,7 +191,21 @@ button:hover {
 
 .fade-in-1 {
     padding: 10px;
+    font-size: 1.5vw; /* ใช้ขนาดตัวอักษรที่ยืดหยุ่น */
+    max-width: 100%; /* กำหนดให้พื้นที่ใช้ได้เต็มที่ */
+    word-wrap: break-word; /* ทำให้ข้อความตัดเมื่อยาวเกินไป */
+    box-sizing: border-box; /* ป้องกันไม่ให้ padding ล้น */
+    margin: auto; /* จัดให้อยู่กลาง */
 }
+
+@media (max-width: 768px) {
+    .fade-in-1 {
+        font-size: 6vw; /* ปรับขนาดตัวอักษรให้ใหญ่ขึ้นเมื่อหน้าจอเล็ก */
+        padding: 10px 5%; /* เพิ่ม padding เพื่อไม่ให้ชิดขอบมาก */
+    }
+}
+
+
 
 .fade-in-1-1 {
     padding: 10px;
@@ -240,7 +254,6 @@ button:hover {
     border-radius: 8px;
     height: 80vh;
     width: 100vh;
-    display: flex;
     flex: 1;
 }
 
