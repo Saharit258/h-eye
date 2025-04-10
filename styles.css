@@ -150,6 +150,24 @@ button:hover {
     justify-content: center;
 }
 
+.image-container{
+    text-align: center;
+}
+
+.right-1 img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.right-1 img:hover {
+    transform: scale(1.1);
+}
+
 .right img {
     width: 300px;  /* ปรับขนาดกว้าง */
     height: 300px; /* ปรับขนาดสูง */
@@ -170,6 +188,18 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+.fade-in-1 {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.fade-in-1-1 {
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
 
 /* ทำให้ responsive */
 @media (max-width: 768px) {
@@ -212,7 +242,8 @@ button:hover {
     border-radius: 8px;
     height: 80vh;
     width: 100vh;
-    display: flex;
+
+    flex: 1;
 }
 
 /* จัดรูปให้อยู่ขวา */
@@ -221,13 +252,13 @@ button:hover {
     border-radius: 8px;
     height: 80vh;
     width: 100vh;
-    display: flex;
 }
 
 .container-2 {
     width: 100%;
     overflow: hidden;
     background: #fff;
+    margin-top: -200px;
   }
   
   .slider {
