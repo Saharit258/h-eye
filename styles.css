@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.first-page {
+    height: 100vh; /* เต็มจอ */
+    background-color: rgba(255, 192, 203, 0.29); /* สีชมพูเฉพาะหน้าแรก */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* กำหนดให้แต่ละ container มีความสูงเท่ากับหน้าจอ */
+    position: relative;
+    z-index: 2;
+    padding: 50px 20px; /* เพิ่ม padding เพื่อไม่ให้เนื้อหาชิดขอบ */
+    box-sizing: border-box;
+}
+
+.container-qu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* กำหนดให้แต่ละ container มีความสูงเท่ากับหน้าจอ */
+    position: relative;
+    z-index: 2;
+    padding: 50px 20px; /* เพิ่ม padding เพื่อไม่ให้เนื้อหาชิดขอบ */
+    box-sizing: border-box;
+    background-color: rgba(255, 192, 203, 0.29);
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.surprise-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
+
+.surprise-btn:hover {
+    background: #e84118;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* อนิเมชั่นลูกโป่งและหัวใจ */
+.floating {
+    position: fixed; /* เปลี่ยนจาก absolute เป็น fixed */
+    bottom: -100px;
+    width: 40px;
+    z-index: 9999; /* ให้ลอยอยู่หน้าสุด */
+    pointer-events: none; /* ไม่รบกวนการคลิก */
+    animation: floatUp 6s linear forwards;
+}
+
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-150vh); opacity: 0; }
+}
+
+.next-btn {
+    margin-top: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background: #e84118;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    background: #ff4757;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e84118;
+}
+
+#gift {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #ffcc00;
+}
+
+/* จัดให้แบ่งเป็น 2 คอลัมน์ */
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    gap: 50px;
+    border: 2px solid black; /* เพิ่มกรอบสีดำ */
+    border-radius: 10px; /* เพิ่มมุมโค้งมนให้กรอบ */
+    margin-top: 10px;
+}
+
+/* จัดข้อความให้อยู่ซ้าย */
+.left {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* จัดรูปให้อยู่ขวา */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    width: 300px;  /* ปรับขนาดกว้าง */
+    height: 300px; /* ปรับขนาดสูง */
+    object-fit: cover; /* ครอบรูปให้พอดี */
+    border-radius: 10px; /* ขอบโค้งมนเล็กน้อย */
+    transition: opacity 0.5s ease-in-out; /* ทำให้ภาพเปลี่ยนแบบนุ่มนวล */
+}
+
+
+/* อนิเมชันเลื่อนขึ้น */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ทำให้ responsive */
+@media (max-width: 768px) {
+    .two-column {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* ทำให้รูปเปลี่ยนแบบนุ่มนวล */
+.image-transition {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-fade {
+    opacity: 0;
+}
+
+.two-column-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    gap: 50px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.left-1 {
+    border: 2px solid rgb(255, 123, 123);
+    border-radius: 8px;
+    height: 80vh;
+    width: 100vh;
+    display: flex;
+}
+
+/* จัดรูปให้อยู่ขวา */
+.right-1 {
+    border: 2px solid rgb(255, 104, 104);
+    border-radius: 8px;
+    height: 80vh;
+    width: 100vh;
+    display: flex;
+}
+
+.container-2 {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  .slider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slide-track {
+    display: flex;
+    animation: scrollLeft 20s linear infinite;
+  }
+  
+  .slide-track img {
+    width: 20vw;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* ทำให้เลื่อนซ้ายเรื่อยๆ */
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+      font-size: 40px; /* ลดขนาดหัวข้อเล็กน้อย */
+    }
+  
+    .two-column,
+    .two-column-1 {
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px 10px;
+    }
+  
+    .left, .right,
+    .left-1, .right-1 {
+      width: 100%;
+      height: auto;
+    }
+  
+    .right img {
+      width: 90%;
+      height: auto;
+    }
+  
+    .slide-track img {
+      width: 30vw; /* ลดขนาดรูปที่หมุน */
+      margin-right: 10px;
+    }
+  
+    .slide-track {
+      animation-duration: 25s; /* ช้าลงนิดนึงเวลาอยู่จอเล็ก */
+    }
+  
+    iframe {
+      width: 100% !important;
+      height: auto;
+    }
+  }
+  
