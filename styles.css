@@ -240,7 +240,7 @@ button:hover {
     border-radius: 8px;
     height: 80vh;
     width: 100vh;
-
+    display: flex;
     flex: 1;
 }
 
