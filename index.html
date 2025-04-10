@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container first-page">
+        <h1 class="fade-in">Happy Birthday!</h1>
+
+    </div>
+
+    <div class="container">
+        <h1 class="fade-in">ฟังเพลงนี้สำหรับวันพิเศษของคุณ! 🎶</h1>
+        <button class="next-btn" onclick="playMusic()">เล่นเพลง</button>
+        <div class="video-container" id="videoContainer" style="display: none;">
+            <iframe id="birthdaySong" width="560" height="315" 
+                src="https://www.youtube.com/embed/XjdAIEeMUNo?si=rJZU7iaFuADRCnk3" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="two-column">
+            <div class="left">
+                <h2 class="fade-in">สุขสันต์วันเกิด! 🎂</h2>
+                <p class="fade-in">ขอให้ปีนี้เป็นปีที่ดีนะ แล้วก็ด่าเราน้อยๆหน่อยบางทีไม่ต้องลืมปุบตัวเองยังไม่ทันทำอะไรเลยจับโทรศัพท์ได้ด่าเราก่อนเลย 😂😂😂</p>
+            </div>
+            <div class="right">
+                <img id="birthdayImage" src="image1.jpg" alt="Happy Birthday" class="fade-in image-transition">
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container-qu">
+        <h1 class="fade-in">เกมทายคำถาม!</h1>
+        <p id="question"></p>
+        <div id="answers">
+            <button class="answer" onclick="checkAnswer(0)">คำตอบ 1</button>
+            <button class="answer" onclick="checkAnswer(1)">คำตอบ 2</button>
+            <button class="answer" onclick="checkAnswer(2)">คำตอบ 3</button>
+        </div>
+        <div id="gift" style="display:none;">
+            <h2>ของขวัญของคุณคือ: <span id="giftMessage"></span></h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="two-column-1">
+            <div class="left-1"></div>
+            <div class="right-1"></div>
+        </div>
+    </div>
+
+    <div class="container-2">
+        <div class="slider">
+          <div class="slide-track">
+            <img src="p/1.jpg" />
+            <img src="p/2.jpg" />
+            <img src="p/3.jpg" />
+            <img src="p/4.jpg" />
+            <img src="p/5.jpg" />
+            <img src="p/6.jpg" />
+            <img src="p/7.jpg" />
+            <img src="p/8.jpg" />
+            <img src="p/9.jpg" />
+            <img src="p/10.jpg" />
+          </div>
+        </div>
+      </div>
+      
+      
+    <script src="script.js"></script>
+</body>
+</html>
